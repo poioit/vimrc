@@ -22,7 +22,7 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
-
+set number
 
 filetype off          " necessary to make ftdetect work on Linux
 syntax on
@@ -336,3 +336,8 @@ au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw! " recompile c
 
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
+
+"NERDTree setting
+nnoremap <silent> <F6> :NERDTree<CR>
+
+
