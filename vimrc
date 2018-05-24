@@ -22,7 +22,7 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
-
+set number
 
 filetype off          " necessary to make ftdetect work on Linux
 syntax on
@@ -75,8 +75,9 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4
+   set shiftwidth=3
+   set tabstop=4
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -317,7 +318,8 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
-
+" -- NerdTree
+nnoremap <silent> <F6> :NERDTreeToggle<CR>
 " --- TagBar
 " toggle TagBar with F7
 nnoremap <silent> <F7> :TagbarToggle<CR> 
