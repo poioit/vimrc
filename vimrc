@@ -75,8 +75,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4
+   set shiftwidth=4
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -339,4 +339,29 @@ let g:gitgutter_enabled = 1
 
 " set ejs filetype to html
 au BufNewFile,BufRead *.ejs set filetype=html
+
+
+"for NERDTree
+nnoremap <silent> <F6> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
+let NERDTreeChDirMode = 2
+
+
+set nu
+"switch window
+nmap <silent> <C-j> :wincmd k<CR>
+nmap <silent> <C-k> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+
+"" Searching
+nnoremap / /\v
+vnoremap / /\v
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <leader><space> :let @/=''<cr> " clear search"
 
